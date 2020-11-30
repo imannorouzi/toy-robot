@@ -15,7 +15,7 @@ The project consists of five files.
 
 ## How to run
 
-  1. Open index.html or check it at `[https://imannorouzi.github.io/toy-robot/index.html] My Github Pages` and that's it!
+  1. Open index.html or check it at [My Toy Robot Github Page](https://imannorouzi.github.io/toy-robot/index.html) and that's it!
 
 ## How it works
 
