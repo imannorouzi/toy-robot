@@ -1,8 +1,16 @@
 
+/**
+ * Description: Creates a Robot object and handles user input to control it.
+ *
+ * @author Iman Norouzi
+ */
+
 // reference to robot object
 let robot;
 
-/* executes when the page loads*/
+/**
+ * Description: executes when the page is loaded and creates a robot object
+ */
 function init() {
     /* Instantiate a Robot object on a 5x5 board
     * THe problem requirement mentions 5x5 board but it can be any pair of positive values
@@ -10,13 +18,11 @@ function init() {
     robot = new Robot(5, 5);
 }
 
-/*
-* Input: string command
-* Output: void
-*
-* Sends the command to robot object and retrieves result which is { actionPerformed: boolean, message: string }
-*
-* */
+/**
+ * Description: Sends the command to robot object and retrieves result in { actionPerformed: boolean, message: string } format
+ *
+ * @param {string} line
+ * */
 function executeCommand(line){
     let result = robot.processCommand(line);
 
@@ -29,13 +35,12 @@ function executeCommand(line){
     }
 }
 
-/*
-* Input: string 'text' and string 'colour'
-* Output: void
-*
-* Appends a string to the command placeholder and sets the colour
-*
-* */
+/**
+ * Description: Appends a string to the command placeholder and sets the colour
+ *
+ * @param {string} text
+ * @param {string} colour
+ * */
 function appendCommand(text, colour){
     let commandDiv = document.createElement("div");
     commandDiv.style.color =  colour;
@@ -43,13 +48,9 @@ function appendCommand(text, colour){
     document.getElementById('commands').appendChild(commandDiv);
 }
 
-/*
-* Input: void
-* Output: void
-*
-* Captures the text from the 'commandTextArea' element and sends sends each line as a command to robot
-*
-* */
+/**
+ * Description: Captures the text from the 'commandTextArea' element and sends sends each line as a command to robot
+ * */
 function readTextArea() {
     let textArea = document.getElementById('commandTextArea');
     let lines = textArea.value.split('\n');
@@ -61,14 +62,10 @@ function readTextArea() {
     textArea.value = ''
 }
 
-/*
-* Input: void
-* Output: void
-*
-* This is triggered when a file is selected by the user. It tries to read the content of the file and
-* send it line by line to the robot to be executed as a command
-*
-* */
+/**
+ * Description: This is triggered when a file is selected by the user. It tries to read the content of the file and
+ * send it line by line to the robot to be executed as a command
+ * */
 function readInputFile(){
     let fileInput = document.getElementById('fileInput');
     if(fileInput.files.length > 0){
@@ -95,12 +92,8 @@ function readInputFile(){
     }
 }
 
-/*
-* Input: void
-* Output: void
-*
-* Triggers once a keyUp event happens for single input field.
-*
+/**
+* Description: Triggers once a keyUp event happens for single input field.
 * */
 function keyUp(event){
     // if it's an 'Enter' key take the value as a command and send it to robot

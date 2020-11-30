@@ -1,4 +1,3 @@
-
 // This is an array of command arrays. You can add your test cases to this and they would be executed
 // when the page loads.
 const commandsContainer = [
@@ -29,12 +28,8 @@ const commandsContainer = [
     ]
 ];
 
-/*
-* Input: void
-* Output: void
-*
-* Loops over commandsContainer and test each set
-*
+/**
+* Description: Loops over commandsContainer and test each set
 * */
 function testAll(){
     for( let c=0; c<commandsContainer.length; c++){
@@ -42,15 +37,13 @@ function testAll(){
     }
 }
 
-/*
-* Input: string[]
-* Output: void
-*
-* Receives a list of commands. Creates a Robot object and executes the commands on that one by one.
-* When reaches to a 'REPORT' command, checks the robot state with the expected output and it would
-* give a assert error in console if it fails otherwise console would be empty!
-*
-* */
+/**
+ * Description: Receives a list of commands. Creates a Robot object and executes the commands on that one by one.
+ * When reaches to a 'REPORT' command, checks the robot state with the expected output and it would
+ * give a assert error in console if it fails otherwise console would be empty!
+ *
+ * @param {string[]} commands
+ * */
 function test(commands){
     // crate a robot object
     let testRobot = new Robot(5, 5);

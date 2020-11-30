@@ -2,14 +2,16 @@
 // turn left and right easier just by decreasing and increasing a number
 const FACE = [ 'NORTH', 'EAST', 'SOUTH', 'WEST' ];
 
-
-/*
-*
-* Robot Object
-*
-* It is better to create this in a ts file to be able to define data types and make it more readable
-* but I decided to deliver this application in pure javascript and that's why I'm not using data types
-* */
+/**
+ * Robot Object
+ *
+ * Description: It is better to create this in a ts file to be able to define data types and make it more readable
+ * but I decided to deliver this application in pure javascript and that's why I'm not using data types
+ *
+ * Description. (use period)
+ *
+ * @author Iman Norouzi
+ */
 class Robot {
 
     // It's not needed to declare 'undefined' members in js, but I just put them to introduce the Robot object
@@ -29,12 +31,14 @@ class Robot {
      */
     f;
 
-    /*
-    * Input: x: number, y: number, f: string
-    * Output: boolean
-    *
-    * Places the robot in position (x, y) facing f direction and returns true if place is valid
-    * */
+    /**
+     * Description: Places the robot in position (x, y) facing f direction and returns true if place is valid
+     *
+     * @param {number} x
+     * @param {number} y
+     *
+     * @return {boolean}
+     */
     place(x, y, f){
 
         // check if the place is valid
@@ -53,24 +57,22 @@ class Robot {
         return true;
     }
 
-    /*
-    * Constructor to instantiate a Robot object
-    *
-    * Input: boardCols: number, boardRows: number
-    *
-    * Sets the board limits
-    * */
+    /**
+     * Description: Constructor to instantiate a Robot object. Sets the board limits.
+     *
+     * @param {number}  boardCols
+     * @param {number} boardRows
+     * */
     constructor(boardCols, boardRows){
         this.boardCols = boardCols;
         this.boardRows = boardRows;
     }
 
-    /*
-    * Input: void
-    * Output: boolean
-    *
-    * Turns the robot to the 90 degrees to the left and returns true if success (which is always after robot has been placed)
-    * */
+    /**
+     * Description: Turns the robot to the 90 degrees to the left and returns true if success (which is always after robot has been placed)
+     *
+     * @return {boolean}
+     * */
     left(){
         if(!this.isRobotPlaced()) {
             return false;
@@ -81,12 +83,11 @@ class Robot {
         return true;
     }
 
-    /*
-    * Input: void
-    * Output: boolean
-    *
-    * Turns the robot to the 90 degrees to the right and returns true if success (which is always after robot has been placed)
-    * */
+    /**
+     * Description: Turns the robot to the 90 degrees to the right and returns true if success (which is always after robot has been placed)
+     *
+     * @return {boolean}
+     * */
     right(){
         if(!this.isRobotPlaced()) {
             return false;
@@ -96,12 +97,11 @@ class Robot {
         return true;
     }
 
-    /*
-    * Input: void
-    * Output: boolean
-    *
-    * Moves robot one step forward and return true if there is space forward otherwise returns false
-    * */
+    /**
+     * description: Moves robot one step forward and return true if there is space forward otherwise returns false
+     *
+     * @return {boolean}
+     * */
     move(){
 
         // Check if robot has been placed
@@ -155,12 +155,11 @@ class Robot {
         return true;
     }
 
-    /*
-    * Input: void
-    * Output: string
-    *
-    * returns the state of the robot in the format of 'Output X,Y,FACE' if robot has placed before
-    * */
+    /**
+     * Description: returns the state of the robot in the format of 'Output X,Y,FACE' if robot has placed before
+     *
+     * @return {string}
+     * */
     report(){
         // check if robot is placed
         if(this.isRobotPlaced()) {
@@ -170,12 +169,12 @@ class Robot {
     }
 
 
-    /*
-    * Input: void
-    * Output: boolean
-    *
-    * returns true if x, y and f have values which means robot has placed on the board
-    * */
+    /**
+     *
+     * Description: returns true if x, y and f have values which means robot has placed on the board
+     *
+     * @return {boolean}
+     * */
     isRobotPlaced(){
         return typeof this.x !== "undefined" &&
             typeof this.y !== "undefined" &&
@@ -183,16 +182,15 @@ class Robot {
     }
 
 
-    /*
-    * Input: string
-    * Output: object { actionPerformed: boolean, message: string }
-    *
-    * receives a line of input, checks it's validity and performs the command, if the command has an
-    * effect on the robot state or command = 'REPORT', it would return actionPerformed as true otherwise actionPerformed
-    * would be false. For some commands like 'REPORT' robot needs to return some message which is
-    * communicated using message filed in the return object
-    *
-    * */
+    /**
+     * Description: receives a line of input, checks it's validity and performs the command, if the command has an
+     * effect on the robot state or command = 'REPORT', it would return actionPerformed as true otherwise actionPerformed
+     * would be false. For some commands like 'REPORT' robot needs to return some message which is
+     * communicated using message filed in the return object
+     *
+     * @param {string} line
+     * @return {Object} { actionPerformed: boolean, message: string }
+     * */
     processCommand(line){
 
         let actionPerformed = false;
