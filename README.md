@@ -20,6 +20,18 @@ The project consists of six files.
 
   1. Open index.html or check it at [My Toy Robot Github Page](https://imannorouzi.github.io/toy-robot/index.html) and that's it!
 
+## How to use
+
+The application is only accepting commands in below format. It doesn't like extra spaces at the start or end of commands and parameters.
+
+* PLACE X,Y,FACE
+* MOVE
+* LEFT
+* RIGHT
+* REPORT
+ 
+ You can find the explanation for each command at the [end](#description-and-requirements) of this README file.
+
 ## How it works
 
 It is possible to send commands to the Robot using three different methods.
