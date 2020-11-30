@@ -32,8 +32,6 @@ The application is only accepting commands in below format. It doesn't like extr
  
  You can find the explanation for each command at the [end](#description-and-requirements) of this README file.
 
-## How it works
-
 It is possible to send commands to the Robot using three different methods.
 
 1. Single Input - `app.js` has a listener set on the input field using `keyUp` function. It monitors each input character and sends the typed in value to Robot once `Enter` key is pressed. 
