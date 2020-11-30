@@ -1,0 +1,35 @@
+html, body{
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+#container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* align items in Main Axis */
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
+    margin: auto;
+    background: #e8faff;
+    padding: 20px;
+}
+#commands{
+    overflow: hidden;
+    flex: 1 1 auto;
+}
+
+input{
+    margin: 20px 0;
+    font-size: 18px;
+    padding: 3px;
+}
+
+button{
+    cursor: pointer;
+    padding: 3px;
+}
+
+#fileInputLink{
+    margin: 20px 0;
+}

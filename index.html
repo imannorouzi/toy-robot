@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Toy Robot by Iman Norouzi</title>
+<head>
+    <script language="javascript" type="text/javascript" src="Robot.js"></script>
+    <script language="javascript" type="text/javascript" src="app.js"></script>
+    <script language="javascript" type="text/javascript" src="test.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="container">
+    <h2>Toy Robot code challenge by Iman Norouzi</h2>
+    <p>There are three input methods to test the code:</p>
+    <ul>
+        <li>Single command</li>
+        <li>List of commands in textarea(default test case has been set)</li>
+        <li>Choosing a TXT file</li>
+    </ul>
+
+    <p>I tried to keep it very simple. For details please check <a href="#">ReadMe</a> file.</p>
+    <div id="commands"></div>
+
+    <input id="commandInput" type="text" onkeyup="keyUp(event)" placeholder="Command (Press enter to submit)..."/>
+
+    <textarea id="commandTextArea" rows="6" placeholder="Write a command list and press 'Execute'">PLACE 1,2,EAST
+MOVE
+MOVE
+LEFT
+MOVE
+REPORT</textarea>
+    <button type="button" onclick="readTextArea(event)">Execute</button>
+
+    <input type="file" name="fileInput" id="fileInput" style="display:none;" onchange="readInputFile(event)"/>
+    <a id="fileInputLink" href="#" onclick="document.getElementById('fileInput').click()">Execute from a txt file</a>
+</div>
+</body>
