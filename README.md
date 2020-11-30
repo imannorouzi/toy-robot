@@ -1,4 +1,4 @@
-##Toy Robot Code Challenge
+## Toy Robot Code Challenge
 
 This small application has been created by **Iman Norouzi** in order to accomplish a code challenge for **IRESS company**.
 
@@ -15,9 +15,9 @@ The project consists of five files.
 
 ## How to run
 
-  1. Open index.html or go to `this url` and that's it!
+  1. Open index.html or check it at `[https://imannorouzi.github.io/toy-robot/index.html] My Github Pages` and that's it!
 
-##How it works
+## How it works
 
 It is possible to send commands to the Robot using three different methods.
 
@@ -25,7 +25,7 @@ It is possible to send commands to the Robot using three different methods.
 1. Textarea Input - It is possible to enter multiple commands in the textarea and send them to Robot by clicking on `Execute` button. This action is handled in `readTextArea` in `app.js`.
 1. Text File Input - By choosing a txt file which contains the list of commands, `readInputFile` function would read the content of selected file and send it to simulated robot.
 
-##Robot Object
+## Robot Object
 
 
 `Robot` class is declared in `Robot.js` file and has below attributes and methods:
