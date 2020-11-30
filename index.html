@@ -11,8 +11,8 @@
 
 <div id="container">
     <h2>Toy Robot code challenge by Iman Norouzi</h2>
-    <p>For details please check <a href="https://github.com/imannorouzi/toy-robot">here</a>.</p>
-    <div id="commands"></div>
+    <p>For details please check <a href="https://github.com/imannorouzi/toy-robot" target="_blank">here</a>.</p>
+    <div id="commands"></div> <!-- A placeholder for the commands history -->
 
     <input id="commandInput" type="text" onkeyup="keyUp(event)" placeholder="Command (Press enter to submit)..."/>
 
@@ -24,7 +24,7 @@ MOVE
 REPORT</textarea>
     <button type="button" onclick="readTextArea(event)">Execute</button>
 
-    <input type="file" name="fileInput" id="fileInput" style="display:none;" onchange="readInputFile(event)"/>
-    <a id="fileInputLink" href="#" onclick="document.getElementById('fileInput').click()">Execute from a txt file</a>
+    <input type="file" name="fileInput" id="fileInput" style="display:none;" onchange="readInputFile(event)"/> <!-- hidden -->
+    <a id="fileInputLink" href="#" onclick="document.getElementById('fileInput').click()">Execute from a txt file</a> <!-- To display file input-->
 </div>
 </body>
