@@ -7,7 +7,7 @@ The application has been written in pure javascript and doesn't use any framewor
 You can find the description and requirements of this simulation at the end of this page.
 
 #### Project tree
-The project consists of six files.
+The project consists of seven files.
 
  * [index.html](./index.html) - Landing page
  * [app.js](./app.js) - The script that initiates the page, a robot object, and manages user inputs.
@@ -15,6 +15,7 @@ The project consists of six files.
  * [test.js](./test.js) - The script containing some simple test cases which is executed when the page is loaded.
  * [README.md](./README.md) - The file you are looking at now.
  * [style.css](./style.css) - To make the landing page a look.
+ * [sample.txt](./sample.txt) - A sample txt file for testing.
 
 ## How to run
 
